@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: #020617;
+}
+
+.glass-card {
+  background: linear-gradient(140deg, rgba(15, 23, 42, 0.86), rgba(15, 23, 42, 0.6));
+  backdrop-filter: blur(10px);
+}
+
+.hover-lift {
+  transition: transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(2, 132, 199, 0.2);
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(30px);
+  pointer-events: none;
+  animation: floatY 7s ease-in-out infinite;
+}
+
+.hero-orb.secondary {
+  animation-delay: 1.4s;
+  animation-duration: 9s;
+}
+
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeUp 0.7s ease-out forwards;
+}
+
+.animate-fade-up.delay {
+  animation-delay: 0.2s;
+}
+
+.animate-fade-up.delay-2 {
+  animation-delay: 0.35s;
+}
+
+.chart-draw {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawLine 2.4s ease forwards;
+}
+
+.chart-draw.delay {
+  animation-delay: 0.35s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
