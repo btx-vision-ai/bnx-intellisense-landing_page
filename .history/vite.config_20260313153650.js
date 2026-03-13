@@ -4,12 +4,12 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/bnx-intellisense-landing_page/", 
   plugins: [
     tailwindcss(),
     react({
       babel: {
         plugins: [['babel-plugin-react-compiler']],
+        base: "/bnx-intellisense-infographic/"
       },
     }),
   ],

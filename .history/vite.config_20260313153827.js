@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/bnx-intellisense-landing_page/", 
+  base: "/bnx-intellisense-infographic/", 
   plugins: [
     tailwindcss(),
     react({

@@ -7,9 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^19.2.0",
@@ -30,5 +28,5 @@
     "tailwindcss": "^4.2.1",
     "vite": "^7.3.1"
   },
-  "homepage": "https://btx-vision-ai.github.io/bnx-intellisense-infographic/"
+  "homepage": "http://bnx-intellisense-infographic.github.io"
 }
