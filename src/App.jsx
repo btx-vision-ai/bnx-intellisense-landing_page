@@ -15,6 +15,7 @@ const icons = {
   lock: <Icon><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></Icon>,
   zap: <Icon><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></Icon>,
   database: <Icon><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5v14a9 3 0 0 0 18 0V5" /><path d="M3 12a9 3 0 0 0 18 0" /></Icon>,
+  user: <Icon><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></Icon>,
   users: <Icon><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></Icon>,
   check: <Icon><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></Icon>,
   link: <Icon><path d="M10 13a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L10 5" /><path d="M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 1 0 7.07 7.07L14 19" /></Icon>,
@@ -189,7 +190,7 @@ const App = () => {
             </div>
           </div>
 
-          <div className="glass-card animate-fade-up delay rounded-3xl border border-slate-700/80 shadow-2xl">
+          <div className="glass-card animate-fade-up delay overflow-hidden rounded-3xl border border-slate-700/80 shadow-2xl">
             <div className="h-72 w-full border-b border-slate-800 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.24),transparent_45%),linear-gradient(160deg,#0b1228,#0f172a)] p-4">
               <div className="grid h-full grid-cols-12 gap-3">
                 <div className="col-span-7 rounded-xl border border-slate-700 bg-slate-900/70 p-3">
@@ -224,26 +225,12 @@ const App = () => {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-4 p-5 text-center">
-              <div className="rounded-xl bg-slate-950/85 p-3">
-                <p className="text-2xl font-bold text-blue-400">32+</p>
-                <p className="text-xs uppercase tracking-wide text-slate-400">Camera Streams</p>
-              </div>
-              <div className="rounded-xl bg-slate-950/80 p-3">
-                <p className="text-2xl font-bold text-emerald-400">0s</p>
-                <p className="text-xs uppercase tracking-wide text-slate-400">Alert Delay</p>
-              </div>
-              <div className="rounded-xl bg-slate-950/80 p-3">
-                <p className="text-2xl font-bold text-violet-400">16+</p>
-                <p className="text-xs uppercase tracking-wide text-slate-400">AI Modules</p>
-              </div>
-            </div>
-            <div className="mx-5 mb-5 rounded-xl border border-blue-900/80 bg-slate-950/90 p-4 text-left">
-              <p className="text-xs uppercase tracking-widest text-slate-400">Edge Deployment Architecture</p>
-              <div className="mt-3 grid grid-cols-3 items-center gap-2 text-xs font-semibold text-slate-300">
-                <div className="rounded bg-slate-900 p-2 text-center">IP Cameras</div>
-                <div className="rounded bg-blue-600/30 p-2 text-center text-blue-300">BNX Edge Box</div>
-                <div className="rounded bg-slate-900 p-2 text-center">Alerts/API</div>
+            <div className="mx-5 mb-5 rounded-xl border border-blue-900/80 bg-slate-950/90 p-5 text-left">
+              <p className="text-sm uppercase tracking-widest text-slate-400">Edge Deployment Architecture</p>
+              <div className="mt-4 grid grid-cols-3 items-center gap-3 text-sm font-semibold text-slate-300">
+                <div className="rounded-lg bg-slate-900 p-3 text-center">IP Cameras</div>
+                <div className="rounded-lg bg-blue-600/30 p-3 text-center text-blue-300">BNX Edge Box</div>
+                <div className="rounded-lg bg-slate-900 p-3 text-center">Alerts/API</div>
               </div>
             </div>
           </div>
@@ -290,8 +277,8 @@ const App = () => {
               <div className="grid h-48 grid-cols-12 gap-3">
                 <div className="col-span-4 rounded-xl border border-slate-700 bg-slate-900/70 p-3">
                   <p className="text-[10px] uppercase tracking-widest text-slate-400">Uploaded Face</p>
-                  <div className="mt-3 rounded-lg border border-blue-800/60 bg-slate-950 p-2">
-                    <div className="h-24 rounded bg-gradient-to-b from-slate-700 to-slate-900" />
+                  <div className="mt-3 flex h-24 items-center justify-center rounded-lg border border-blue-800/60 bg-slate-950 p-2">
+                    <span className="inline-block scale-[2.5] text-slate-500">{icons.user}</span>
                   </div>
                 </div>
                 <div className="col-span-8 rounded-xl border border-slate-700 bg-slate-900/70 p-3">
